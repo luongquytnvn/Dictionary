@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<h2>English</h2>
+<input type="text" id="idinput">
+<h2>Vietnamese</h2>
+<input type="text" id="idoutput">
+<br/>
+<br/>
+<input type="button" value="Translate" onclick="translate1()">
+<script>
+    let English = ['one','two','three','four','five','six','seven','eight','nine','ten'];
+    let Vietnamese = ['một','hai','ba','bốn','năm','sáu','bẩy','tám','chín','mười'];
+    let result;
+    let input;
+    function translate1() {
+        input = document.getElementById('idinput').value;
+
+        if (English.indexOf(input)==-1) {
+            result = 'Không tìm thấy'
+        } else {
+            result = Vietnamese[English.indexOf(input)];
+        }
+        document.getElementById('idoutput').value = result;
+    }
+</script>
+</body>
+</html>
